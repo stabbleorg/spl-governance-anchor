@@ -23,7 +23,7 @@ pub fn deposit_governing_tokens<'a, 'b, 'c, 'info>(
     let ix: Instruction = create_deposit_governing_tokens_ix(
         &ID,
         ctx.accounts.realm.key,
-        ctx.accounts.governing_token_holding.key,
+        ctx.accounts.governing_token_source.key,
         ctx.accounts.governing_token_owner.key,
         ctx.accounts.governing_token_source_authority.key,
         ctx.accounts.payer.key,
