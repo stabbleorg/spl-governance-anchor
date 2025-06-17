@@ -7,10 +7,5 @@ edition = "2021"
 crate-type = ["cdylib", "lib"]
 name = "spl_governance"
 
-[features]
-default = ["cpi"]
-cpi = ["no-entrypoint"]
-no-entrypoint = []
-
 [dependencies]
 anchor-lang = ">=0.29, <=0.31"
