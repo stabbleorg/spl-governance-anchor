@@ -15,6 +15,10 @@ pub mod spl_governance {
     pub fn withdraw_governing_tokens(ctx: Context<WithdrawGoverningTokens>) -> Result<()> {
         Ok(())
     }
+
+    pub fn set_governance_delegate(ctx: Context<SetGovernanceDelegate>, new_delegate: Option<Pubkey>) -> Result<()> {
+        Ok(())
+    }
 }
 
 #[derive(Accounts)]
@@ -47,4 +51,11 @@ pub struct WithdrawGoverningTokens<'info> {
     pub token_owner_record: AccountInfo<'info>,
     pub token_program: AccountInfo<'info>,
     pub realm_config: AccountInfo<'info>,
+}
+
+#[derive(Accounts)]
+pub struct SetGovernanceDelegate<'info> {
+    pub governing_token_owner: AccountInfo<'info>,
+    #[account(mut)]
+    pub token_owner_record: AccountInfo<'info>,
 }
