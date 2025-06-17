@@ -24,7 +24,6 @@ pub struct DepositGoverningTokens<'info> {
     pub governing_token_holding: AccountInfo<'info>,
     #[account(mut)]
     pub governing_token_source: AccountInfo<'info>,
-    #[account(mut)]
     pub governing_token_owner: AccountInfo<'info>,
     pub governing_token_source_authority: AccountInfo<'info>,
     #[account(mut)]
@@ -33,7 +32,6 @@ pub struct DepositGoverningTokens<'info> {
     pub payer: AccountInfo<'info>,
     pub system_program: AccountInfo<'info>,
     pub token_program: AccountInfo<'info>,
-    #[account(mut)]
     pub realm_config: AccountInfo<'info>,
 }
 
@@ -44,11 +42,9 @@ pub struct WithdrawGoverningTokens<'info> {
     pub governing_token_holding: AccountInfo<'info>,
     #[account(mut)]
     pub governing_token_destination: AccountInfo<'info>,
-    #[account(mut)]
     pub governing_token_owner: AccountInfo<'info>,
     #[account(mut)]
     pub token_owner_record: AccountInfo<'info>,
     pub token_program: AccountInfo<'info>,
-    #[account(mut)]
     pub realm_config: AccountInfo<'info>,
 }
