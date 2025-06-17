@@ -192,3 +192,12 @@ pub enum GovernanceInstruction {
         new_governance_delegate: Option<Pubkey>,
     },
 }
+
+#[derive(Clone)]
+pub struct SplGovernance;
+
+impl anchor_lang::Id for SplGovernance {
+    fn id() -> Pubkey {
+        ID
+    }
+}
